@@ -16,9 +16,12 @@
   <label for="new-hero">Hero LastName: </label>
   <input id="new-hero" #herolastName />
 
+
+
+
   <!-- (click) passes input value to add() and then clears the input -->
   <button class="add-button" (click)="add(herofirstName.value, herolastName.value)" >
     Add hero
   </button>
-
+  <label for="new-hero">Hero FullName: {{ getFullName(herofirstName.value, herolastName.value) }}</label>
 </div>
