@@ -2,10 +2,14 @@
 <h2>{{ hero.firstName|uppercase }} Details</h2>
 <div><span>id:</span>{{ hero.id }}</div>
 <div><span>firstName:</span>{{ hero.firstName }} {{hero.age > 20 ? '(Senior)' : '(Junior)'}}</div>
+<div><span>lastName:</span>{{ hero.lastName }}</div>
 <div><span>age:</span>{{ hero.age }}</div>
 <div>
-    <label for="firstName">Hero firstName: </label>
+    <label for="firstName">Hero FirstName: </label>
     <input id="firstName" [(ngModel)]="hero.firstName" placeholder="firstName">
+
+    <label for="lastName">Hero LastName: </label>
+    <input id="lastName" [(ngModel)]="hero.lastName" placeholder="lastName">
 
 </div>
 <button (click) = "goBack()">Go Back</button>

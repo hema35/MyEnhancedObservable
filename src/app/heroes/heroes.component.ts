@@ -42,10 +42,11 @@ getHeroesFromLocalComponent() : void {
  this.heroService.getHeroesFromService()
   .subscribe(heroes => this.heroes = heroes);
 }
-add(firstName: string): void {
+add(firstName: string, lastName: string): void {
   firstName = firstName.trim();
-  if (!firstName) { return; }
-  this.heroService.addHero({ firstName } as Hero)
+  lastName = lastName.trim();
+  if (!firstName && !lastName) { return; }
+  this.heroService.addHero({ firstName, lastName } as Hero)
     .subscribe(hero => {
       this.heroes.push(hero);
     });
