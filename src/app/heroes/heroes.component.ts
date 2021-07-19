@@ -40,7 +40,10 @@ export class HeroesComponent implements OnInit {
 
 getHeroesFromLocalComponent() : void {
  this.heroService.getHeroesFromService()
-  .subscribe(heroes => this.heroes = heroes);
+  .subscribe(heroes => {
+    console.log('myArraySize :', heroes.length, heroes);
+    this.heroes = heroes
+  });
 }
 add(firstName: string, lastName: string): void {
   firstName = firstName.trim();

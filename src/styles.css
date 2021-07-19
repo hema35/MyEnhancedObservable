@@ -15,7 +15,7 @@ body {
   margin: 2em;
 }
 body, input[type="text"], button {
-  color: #333;
+  color: rgb(218, 5, 5);
   font-family: Cambria, Georgia, serif;
 }
 /* everywhere else */
